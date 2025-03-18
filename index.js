@@ -12,6 +12,6 @@ mongoose.connect(process.env.MONGO_DB_URL)
 .then(res=>console.log("Connected Successfully"))
 .catch(error=>console.log(error))
 
-app.listen(8002,()=>{console.log("Server running at PORT 8001")
+app.listen(8002,()=>{console.log("Server running at PORT 8002")
     
 })
