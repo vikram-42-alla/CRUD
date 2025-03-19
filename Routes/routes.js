@@ -12,10 +12,11 @@ router.post("/user",async(req,res)=>{
         res.status(500).json({error:error.message})
     }
 })
-router.get("/:id",async(req,res)=>{
+router.get("/get",async(req,res)=>{
     try{
-    const user=await User.findById(req.params.id)
+    const user=await User.find(req.body)
     if(!user) res.status(404).json({message:"User not found"})
+        res.status(200).json({message:"User Found"})
     }catch(error){
 res.status(500).json({message:error.message})
     }
